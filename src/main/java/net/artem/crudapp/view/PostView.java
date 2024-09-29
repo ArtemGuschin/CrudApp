@@ -1,2 +1,4 @@
-package net.artem.crudapp.view;public class PostView {
+package net.artem.crudapp.view;
+
+public class PostView {
 }

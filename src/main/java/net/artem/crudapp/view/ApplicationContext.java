@@ -1,4 +1,4 @@
 package net.artem.crudapp.view;
 
-public class LabelView {
+public class ApplicationContext {
 }
