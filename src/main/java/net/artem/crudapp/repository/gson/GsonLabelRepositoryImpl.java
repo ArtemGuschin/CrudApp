@@ -1,4 +1,4 @@
 package net.artem.crudapp.repository.gson;
 
-public class GsonLabelRepositoryImpl {
+public class GsonLabelRepositoryImpl implements LabelRepository{
 }

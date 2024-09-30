@@ -1,4 +1,6 @@
 package net.artem.crudapp.exception;
 
-public class NotFoundException {
+import java.io.IOException;
+
+public class NotFoundException extends IOException {
 }

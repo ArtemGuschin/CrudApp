@@ -1,0 +1,14 @@
+ [
+   {
+     "id" : 1,
+     "name": "Sport",
+     "labelStatus": "ACTIVE"
+   },
+   {
+     "id" : 2,
+     "name": "Sport2",
+     "labelStatus": "DELETED"
+
+   }
+
+ ]

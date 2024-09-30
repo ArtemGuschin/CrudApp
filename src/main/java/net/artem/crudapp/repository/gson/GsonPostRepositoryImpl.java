@@ -1,4 +1,4 @@
 package net.artem.crudapp.repository.gson;
 
-public class GsonPostRepositoryImpl {
+public class GsonPostRepositoryImpl implements PostRepository{
 }
