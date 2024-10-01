@@ -4,9 +4,10 @@ import net.artem.crudapp.model.Writer;
 
 import java.util.List;
 
-public class GsonWriterRepositoryImpl  implements WriterRepository{
+public class GsonWriterRepositoryImpl  implements WriterRepository {
+
     @Override
-    public Writer getById(Integer integer) {
+    public Writer getById(Long aLong) {
         return null;
     }
 
@@ -26,7 +27,7 @@ public class GsonWriterRepositoryImpl  implements WriterRepository{
     }
 
     @Override
-    public void deleteById(Integer integer) {
+    public void deleteById(Long aLong) {
 
     }
 }

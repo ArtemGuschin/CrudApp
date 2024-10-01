@@ -1,4 +1,6 @@
 package net.artem.crudapp.repository.gson;
 
-public interface PostRepository {
+import net.artem.crudapp.model.Post;
+
+public interface PostRepository extends GenericRepository<Post,Long> {
 }
