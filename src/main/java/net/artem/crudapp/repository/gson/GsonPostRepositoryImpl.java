@@ -1,11 +1,11 @@
 package net.artem.crudapp.repository.gson;
 
 import net.artem.crudapp.model.Post;
-import net.artem.crudapp.model.Writer;
+import net.artem.crudapp.repository.PostRepository;
 
 import java.util.List;
 
-public class GsonPostRepositoryImpl implements PostRepository{
+public class GsonPostRepositoryImpl implements PostRepository {
 
     @Override
     public Post getById(Long aLong) {
