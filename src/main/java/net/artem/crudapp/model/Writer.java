@@ -7,18 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Getter
-@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 public class Writer {
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private List<Post> posts;
+    private WriterStatus writerStatus;
 
+    public Writer(String firstName, String lastName, List<Post> posts, WriterStatus writerStatus) {
+    }
 
 
     public void addPost(Post post) {

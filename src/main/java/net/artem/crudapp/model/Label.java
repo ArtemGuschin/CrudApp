@@ -6,13 +6,13 @@ import net.artem.crudapp.enums.LabelStatus;
 import java.util.Objects;
 
 
-@Getter
-@Setter
+@Data
+@Builder
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
 
 public class Label {
-    private long id;
+    private Long id;
     private String name;
     private LabelStatus labelStatus;
 
@@ -23,6 +23,7 @@ public class Label {
     }
 
 
+    public Label(String name, LabelStatus labelStatus) {
 
-
+    }
 }

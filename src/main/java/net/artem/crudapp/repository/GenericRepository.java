@@ -1,4 +1,4 @@
-package net.artem.crudapp.repository.gson;
+package net.artem.crudapp.repository;
 
 import java.util.List;
 

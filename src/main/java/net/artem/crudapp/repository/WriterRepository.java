@@ -1,8 +1,6 @@
-package net.artem.crudapp.repository.gson;
+package net.artem.crudapp.repository;
 
 import net.artem.crudapp.model.Writer;
-
-import java.util.List;
 
 public interface WriterRepository extends GenericRepository<Writer,Long> {
 
