@@ -19,7 +19,8 @@ public class GsonPostRepositoryImpl implements PostRepository {
     private final Gson GSON = new Gson();
 
     private Long generateNewId(List<Post> posts) {
-        return posts.stream().mapToLong(Post::getId).max().orElse(0) + 1;
+        return posts.stream()
+                .mapToLong(Post::getId).max().orElse(0) + 1;
     }
 
     private List<Post> loadPosts() {

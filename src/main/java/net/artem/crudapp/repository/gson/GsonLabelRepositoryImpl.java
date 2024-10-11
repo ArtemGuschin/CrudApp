@@ -16,7 +16,8 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
     private final Gson GSON = new Gson();
 
     private Long generateNewId(List<Label> labels) {
-        return labels.stream().mapToLong(Label::getId).max().orElse(0) + 1;
+        return labels.stream()
+                .mapToLong(Label::getId).max().orElse(0) + 1;
 
     }
 

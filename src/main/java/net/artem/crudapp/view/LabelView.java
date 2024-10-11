@@ -7,8 +7,9 @@ import net.artem.crudapp.model.Label;
 import java.util.Scanner;
 
 public class LabelView {
-    private final Scanner SCANNER = new Scanner(System.in);
+
     private final LabelController labelController = new LabelController();
+    private final Scanner SCANNER = new Scanner(System.in);
 
     public void showMainLabelView() {
 

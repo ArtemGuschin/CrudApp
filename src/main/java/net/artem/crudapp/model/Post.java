@@ -3,25 +3,40 @@ package net.artem.crudapp.model;
 import lombok.*;
 import net.artem.crudapp.enums.PostStatus;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 
 public class Post {
     private Long id;
-    private List<Post> posts;
+    private String content;
     private PostStatus postStatus;
+    private List<Label> labels;
+    private Date created;
+    private Date updated;
 
 
 
 
-    public Post(Long id, String name, List<Post> post, PostStatus postStatus) {
+    public void addLabel(Label label){
+        if (labels == null){
+            labels = new ArrayList<>();
+        }
+        labels.add(label);
     }
 
-    public Post(String content, Date created, Date update, List<Label> labels) {
 
-    }
+
+
+
+
+
+
+
 }

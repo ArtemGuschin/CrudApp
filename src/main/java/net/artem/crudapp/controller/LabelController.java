@@ -1,6 +1,5 @@
 package net.artem.crudapp.controller;
 
-import lombok.RequiredArgsConstructor;
 import net.artem.crudapp.enums.LabelStatus;
 import net.artem.crudapp.model.Label;
 import net.artem.crudapp.repository.LabelRepository;

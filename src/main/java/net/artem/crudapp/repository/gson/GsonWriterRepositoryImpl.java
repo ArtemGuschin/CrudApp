@@ -19,7 +19,8 @@ public class GsonWriterRepositoryImpl implements WriterRepository {
     private final Gson GSON = new Gson();
 
     private Long generateNewId(List<Writer> writers) {
-        return writers.stream().mapToLong(Writer::getId).max().orElse(0) + 1;
+        return writers.stream().mapToLong(Writer::getId)
+                .max().orElse(0) + 1;
     }
 
     private List<Writer> loadWriters() {

@@ -1,36 +1,38 @@
 package net.artem.crudapp.controller;
 
-import net.artem.crudapp.enums.LabelStatus;
+import lombok.Data;
 import net.artem.crudapp.enums.WriterStatus;
-import net.artem.crudapp.model.Label;
 import net.artem.crudapp.model.Post;
 import net.artem.crudapp.model.Writer;
 import net.artem.crudapp.repository.WriterRepository;
 import net.artem.crudapp.repository.gson.GsonWriterRepositoryImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WriterController {
     private final WriterRepository writerRepository;
-
 
     public WriterController(WriterRepository writerRepository) {
         this.writerRepository = writerRepository;
     }
 
     public WriterController() {
+
         this.writerRepository = new GsonWriterRepositoryImpl();
     }
 
-    public Writer createWriter(String firstName, String lastName,
+
+    public Writer  createWriter(Long id,String firstName, String lastName,
                                List<Post> posts, WriterStatus writerStatus) {
-        Writer newWriter = new Writer(firstName, lastName, posts, writerStatus);
+        Writer newWriter = new Writer(id,firstName, lastName, posts, writerStatus);
         return writerRepository.save(newWriter);
     }
 
     public Writer updateWriter(Long id, String firstName, String lastName,
                                List<Post> posts, WriterStatus writerStatus) {
-        Writer updateWriter = new Writer(firstName, lastName, posts, writerStatus);
+
+        Writer updateWriter = new Writer(id,firstName, lastName, posts, writerStatus);
         return writerRepository.update(updateWriter);
     }
 
