@@ -18,9 +18,9 @@ public class Writer {
     private List<Post> posts;
     private WriterStatus writerStatus;
 
-    public Writer(String firstName, String lastName, List<Post> posts, WriterStatus writerStatus) {
-
-    }
+//    public Writer(String firstName, String lastName, List<Post> posts, WriterStatus writerStatus) {
+//
+//    }
 
 
     public void addPost(Post post) {

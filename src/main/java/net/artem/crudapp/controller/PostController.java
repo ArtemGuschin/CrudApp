@@ -12,24 +12,31 @@ import java.util.List;
 public class PostController {
     private final PostRepository postRepository;
 
-    public PostController(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
 
     public PostController() {
         this.postRepository = new GsonPostRepositoryImpl();
     }
 
-    public Post createPost(Long id, String content, PostStatus postStatus, List<Label> labels,
-                           Date created, Date updated) {
-        Post newPost = new Post(id, content, postStatus, labels, created, updated);
+    public Post createPost(String content, List<Label> labels) {
+        Post newPost = Post.builder()
+                .content(content)
+                .postStatus(PostStatus.ACTIVE)
+                .labels(labels)
+                .created(new Date())
+                .updated(new Date())
+                .build();
         return postRepository.save(newPost);
 
     }
 
     public Post updatePost(Long id, String content, PostStatus postStatus, List<Label> labels,
                            Date created, Date updated) {
-        Post updatePost = new Post(id, content, postStatus, labels, created, updated);
+        Post updatePost = Post.builder()
+                .id(id)
+                .content(content)
+                .postStatus(postStatus)
+                .labels(labels)
+                .build();
         return postRepository.update(updatePost);
     }
 
@@ -37,6 +44,12 @@ public class PostController {
         postRepository.deleteById(id);
     }
 
+
+
+
+    public List<Post> getAll() {
+        return postRepository.getAll();
+    }
 }
 
 

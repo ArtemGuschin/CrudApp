@@ -5,6 +5,8 @@ import net.artem.crudapp.model.Label;
 import net.artem.crudapp.repository.LabelRepository;
 import net.artem.crudapp.repository.gson.GsonLabelRepositoryImpl;
 
+import java.util.List;
+
 public class LabelController {
     private final LabelRepository labelRepository;
 
@@ -38,4 +40,7 @@ public class LabelController {
         labelRepository.deleteById(id);
     }
 
+    public List<Label> getAll() {
+        return labelRepository.getAll();
+    }
 }

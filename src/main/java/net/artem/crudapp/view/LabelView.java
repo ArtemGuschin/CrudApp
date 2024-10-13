@@ -11,9 +11,6 @@ public class LabelView {
     private final LabelController labelController = new LabelController();
     private final Scanner SCANNER = new Scanner(System.in);
 
-    public void showMainLabelView() {
-
-    }
 
     public void createLabel() {
         System.out.println("Enter label name: ");

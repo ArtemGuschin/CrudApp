@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "content": "Java the language of programming",
+    "postStatus": "ACTIVE",
+    "labels": [],
+    "created": "Oct 12, 2024, 6:55:11 PM",
+    "updated": "Oct 12, 2024, 6:55:11 PM"
+  },
+  {
+    "id": 2,
+    "content": "Gang Bang ",
+    "postStatus": "UNDER_REVIEW",
+    "labels": []
+  }
+]

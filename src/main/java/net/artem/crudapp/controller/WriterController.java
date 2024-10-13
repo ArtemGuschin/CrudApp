@@ -23,33 +23,37 @@ public class WriterController {
     }
 
 
-    public Writer  createWriter(Long id,String firstName, String lastName,
-                               List<Post> posts, WriterStatus writerStatus) {
-        Writer newWriter = new Writer(id,firstName, lastName, posts, writerStatus);
+    public Writer createWriter(String firstName, String lastName,
+                               List<Post> posts) {
+        Writer newWriter = Writer.builder()
+                .firstName(firstName)
+                .lastName(lastName)
+                .writerStatus(WriterStatus.UNDER_REVIEW)
+                .posts(posts)
+                .build();
         return writerRepository.save(newWriter);
     }
 
     public Writer updateWriter(Long id, String firstName, String lastName,
                                List<Post> posts, WriterStatus writerStatus) {
-
-        Writer updateWriter = new Writer(id,firstName, lastName, posts, writerStatus);
+        Writer updateWriter = Writer.builder()
+                .id(id)
+                .firstName(firstName)
+                .lastName(lastName)
+                .posts(posts)
+                .writerStatus(writerStatus)
+                .build();
         return writerRepository.update(updateWriter);
     }
 
-//    public Writer updateWriter2(Long id, String firstName, String lastName, List<Post> posts, WriterStatus writerStatus) {
-//        Writer updateWriter = new Writer(firstName, lastName,  posts, writerStatus);
-//        updateWriter.setId(id);
-//        updateWriter.setFirstName(firstName);
-//        updateWriter.setLastName(lastName);
-//        updateWriter.setPosts(posts);
-//        updateWriter.setWriterStatus(WriterStatus.ACTIVE);
-//        return WriterRepository.update(updateWriter);
-//
-//    }
 
     public void deleteWriter(Long id) {
         writerRepository.deleteById(id);
 
+    }
+
+    public List<Writer> getWriter() {
+        return writerRepository.getAll();
     }
 
 
