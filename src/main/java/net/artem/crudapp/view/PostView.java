@@ -36,6 +36,8 @@ public class PostView {
             if (choice == -1L) {
                 return result;
             }
+//            HashMap<Long,Label> idLabel = new HashMap<>();
+//            allLabels.stream().forEach(label -> idLabel.put(label.getId(),label));
             Label selectedLabel = allLabels.stream()
                     .filter(cl -> cl.getId().equals(choice)).findFirst().orElse(null);
             if (Objects.nonNull(selectedLabel)) {
@@ -52,7 +54,7 @@ public class PostView {
         String content = SCANNER.nextLine();
         PostStatus postStatus = PostStatus.UNDER_REVIEW;
         List<Label> labels = fulfillsLabels();
-        Post updatedPost = postController.updatePost(id, content, postStatus, labels, new Date(), new Date());
+        Post updatedPost = postController.updatePost(id, content, postStatus, labels, new Date(),new Date());
 
 
     }
