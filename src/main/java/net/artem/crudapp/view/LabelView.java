@@ -11,15 +11,45 @@ public class LabelView {
     private final LabelController labelController = new LabelController();
     private final Scanner SCANNER = new Scanner(System.in);
 
+    public void startLabel() {
+        while (true) {
+            System.out.println("Hello I am firstApp!!!");
+            System.out.println("1 - create Label ");
+            System.out.println("2 - update Label");
+            System.out.println("3 - delete Label");
+            System.out.println("Press 0 for exit");
 
-    public void createLabel() {
+            int userChoice = SCANNER.nextInt();
+            SCANNER.nextLine();
+
+            switch (userChoice) {
+                case 1:
+                    createLabel();
+                    break;
+                case -1, -2, -3:
+                    System.out.println("Good Bye");
+                    System.exit(0);
+                case 2:
+                    updateLabel();
+                    break;
+                case 3:
+                    deleteLabel();
+                    break;
+                default:
+                    System.exit(0);
+            }
+        }
+    }
+
+
+   private void createLabel() {
         System.out.println("Enter label name: ");
         String labelName = SCANNER.nextLine();
         Label createdLabel = labelController.createLabel(labelName);
         System.out.println("Crated label: " + createdLabel);
     }
 
-    public void updateLabel() {
+   private void updateLabel() {
         System.out.println("Enter  id Label to update :");
         Long id = SCANNER.nextLong();
         SCANNER.nextLine();
@@ -33,7 +63,7 @@ public class LabelView {
         System.out.println("Label update with Id " + updateLabel.getId());
     }
 
-    public void deleteLabel() {
+   private void deleteLabel() {
         System.out.println("Enter label Id  to delete :");
         Long id = SCANNER.nextLong();
         labelController.deleteLabel(id);

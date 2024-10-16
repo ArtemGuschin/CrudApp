@@ -1,17 +1,1 @@
-[
-  {
-    "id": 1,
-    "content": "Java the language of programming",
-    "postStatus": "ACTIVE",
-    "labels": [],
-    "created": "Oct 12, 2024, 6:55:11 PM",
-    "updated": "Oct 12, 2024, 6:55:11 PM"
-  },
-  {
-    "id": 2,
-    "content": "Test update id 2 with Date ",
-    "postStatus": "UNDER_REVIEW",
-    "labels": [],
-    "updated": "Oct 14, 2024, 12:32:18 PM"
-  }
-]
+[{"id":1,"content":"Java the language of programming","postStatus":"DELETED","labels":[],"created":"Oct 12, 2024, 6:55:11 PM","updated":"Oct 12, 2024, 6:55:11 PM"},{"id":2,"content":"Test test test","postStatus":"UNDER_REVIEW","labels":[],"updated":"Oct 14, 2024, 2:30:18 PM"},{"id":3,"content":"Bu Bu Bu","postStatus":"DELETED","labels":[],"updated":"Oct 15, 2024, 4:36:39 PM"},{"id":4,"content":"next content for a test","postStatus":"DELETED","labels":[],"updated":"Oct 16, 2024, 4:21:32 PM"},{"id":5,"content":"jhgffjhgsad ","postStatus":"UNDER_REVIEW","labels":[],"updated":"Oct 16, 2024, 4:38:50 PM"},{"id":6,"content":"content ","postStatus":"UNDER_REVIEW","labels":[],"updated":"Oct 16, 2024, 4:46:06 PM"}]

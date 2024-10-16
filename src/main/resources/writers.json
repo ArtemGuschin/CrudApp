@@ -8,8 +8,50 @@
   },
   {
     "id": 2,
-    "firstName": "Leonid",
-    "lastName": "Guschin",
+    "firstName": "Yula",
+    "lastName": "Petric",
+    "posts": [],
+    "writerStatus": "DELETED"
+  },
+  {
+    "id": 3,
+    "firstName": "Lola ",
+    "lastName": "Stavridis",
+    "posts": [],
+    "writerStatus": "UNDER_REVIEW"
+  },
+  {
+    "id": 4,
+    "firstName": "Silverstr",
+    "lastName": "Stallone",
+    "posts": [],
+    "writerStatus": "DELETED"
+  },
+  {
+    "id": 5,
+    "firstName": "test name",
+    "lastName": "tes last name",
+    "posts": [],
+    "writerStatus": "UNDER_REVIEW"
+  },
+  {
+    "id": 6,
+    "firstName": "lkhkjh",
+    "lastName": "iuyiuty",
+    "posts": [],
+    "writerStatus": "UNDER_REVIEW"
+  },
+  {
+    "id": 7,
+    "firstName": "uuuuu",
+    "lastName": "ppppp",
+    "posts": [],
+    "writerStatus": "UNDER_REVIEW"
+  },
+  {
+    "id": 8,
+    "firstName": "popas",
+    "lastName": "pipas",
     "posts": [],
     "writerStatus": "UNDER_REVIEW"
   }

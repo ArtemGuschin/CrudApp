@@ -32,14 +32,12 @@ public class PostController {
     public Post updatePost(Long id, String content,
                            PostStatus postStatus,
                            List<Label> labels,
-                           Date created,
-                           Date updated) {
+                           Date updated, Date date) {
         Post updatePost = Post.builder()
                 .id(id)
                 .content(content)
                 .postStatus(postStatus)
                 .labels(labels)
-                .updated(created)
                 .updated(updated)
                 .build();
         return postRepository.update(updatePost);
